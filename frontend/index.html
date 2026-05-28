@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SINEE - Sistema de Nivel de Estrés Estudiantil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PANTALLA: Login -->
+  <div id="pantalla-login" class="pantalla activa">
+    <div class="card">
+      <h1>SINEE</h1>
+      <p class="subtitulo">Sistema de Nivel de Estrés Estudiantil</p>
+      <input type="email" id="login-correo" placeholder="Correo electrónico">
+      <input type="password" id="login-contrasena" placeholder="Contraseña">
+      <button onclick="login()">Iniciar sesión</button>
+      <p class="link">¿No tienes cuenta? <a onclick="mostrar('pantalla-registro')">Regístrate</a></p>
+      <p id="login-error" class="error"></p>
+    </div>
+  </div>
+
+  <!-- PANTALLA: Registro -->
+  <div id="pantalla-registro" class="pantalla">
+    <div class="card">
+      <h1>Crear cuenta</h1>
+      <input type="text" id="reg-nombre" placeholder="Nombre completo">
+      <input type="number" id="reg-edad" placeholder="Edad">
+      <input type="email" id="reg-correo" placeholder="Correo electrónico">
+      <input type="password" id="reg-contrasena" placeholder="Contraseña">
+      <select id="reg-nivel">
+        <option value="">Nivel educativo</option>
+        <option value="medio superior">Medio superior</option>
+        <option value="superior">Superior</option>
+      </select>
+      <button onclick="registro()">Registrarse</button>
+      <p class="link">¿Ya tienes cuenta? <a onclick="mostrar('pantalla-login')">Inicia sesión</a></p>
+      <p id="reg-error" class="error"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
