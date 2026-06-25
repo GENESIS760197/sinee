@@ -1,5 +1,4 @@
 import { Module } from '@nestjs/common';
-import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
@@ -19,8 +18,8 @@ import { UsuariosModule } from './usuarios/usuarios.module';
       password: process.env.MYSQLPASSWORD || process.env.DB_PASSWORD,
       database: process.env.MYSQLDATABASE || process.env.DB_NAME,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: false,
-      ssl: process.env.MYSQLHOST ? { rejectUnauthorized: false } : false,
+      synchronize: true, 
+      ssl: { rejectUnauthorized: false }, 
     }),
     UsuariosModule,
   ],
