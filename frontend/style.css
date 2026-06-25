@@ -93,3 +93,122 @@ button:hover {
   text-align: center;
   font-size: 0.85rem;
 }
+
+/* Cuestionario */
+.cuestionario-card {
+  max-width: 700px;
+  gap: 24px;
+}
+
+.seccion {
+  background: #f9fbe7;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-left: 4px solid #43a047;
+}
+
+.seccion h2 {
+  color: #2e7d32;
+  font-size: 1.1rem;
+}
+
+.seccion-desc {
+  color: #777;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.pregunta p {
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.opciones {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.opciones button {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  border: 2px solid transparent;
+  min-width: 40px;
+}
+
+.opciones button.seleccionado {
+  background: #43a047;
+  color: white;
+  border-color: #2e7d32;
+}
+
+.opciones button:hover {
+  background: #c8e6c9;
+}
+
+/* Resultados */
+.resultados-card {
+  max-width: 700px;
+  gap: 24px;
+}
+
+.resultado-nivel {
+  text-align: center;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+}
+
+.nivel-bajo { background: #e8f5e9; color: #2e7d32; }
+.nivel-medio-bajo { background: #f1f8e9; color: #558b2f; }
+.nivel-medio { background: #fff9c4; color: #f57f17; }
+.nivel-medio-alto { background: #ffe0b2; color: #e65100; }
+.nivel-alto { background: #ffebee; color: #c62828; }
+
+.resultado-nivel h2 {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.seccion-resultado {
+  background: #f5f5f5;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 8px;
+}
+
+.seccion-resultado h3 {
+  color: #444;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.barra-progreso {
+  background: #e0e0e0;
+  border-radius: 10px;
+  height: 10px;
+  overflow: hidden;
+}
+
+.barra-fill {
+  height: 100%;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.recomendacion {
+  background: #e3f2fd;
+  border-radius: 10px;
+  padding: 14px;
+  margin-bottom: 8px;
+  border-left: 4px solid #1976d2;
+  color: #1565c0;
+    font-size: 0.9rem;
+}

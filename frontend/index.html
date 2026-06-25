@@ -40,6 +40,78 @@
     </div>
   </div>
 
+  <!-- PANTALLA: Cuestionario -->
+  <div id="pantalla-cuestionario" class="pantalla">
+    <div class="card cuestionario-card">
+      <h1>Cuestionario SINEE</h1>
+      <p class="subtitulo">Responde con honestidad. Escala: 1=Nunca, 2=Casi nunca, 3=A veces, 4=Casi siempre, 5=Siempre</p>
+
+      <div class="seccion">
+        <h2>Sección 1: Carga académica</h2>
+        <p class="seccion-desc">Evalúa el estrés relacionado con tareas, calificaciones y exigencias escolares</p>
+        <div class="pregunta" id="q1"><p>1. Siento presión por obtener buenas calificaciones</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q2"><p>2. La cantidad de tarea y trabajos me provoca estrés</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q3"><p>3. Me estreso cuando no entiendo un tema en clase</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q4"><p>4. El miedo a reprobar me genera ansiedad</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q5"><p>5. La carga académica afecta mi estado de ánimo</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q6"><p>6. ¿Con qué frecuencia sientes presión por la escuela o actividades académicas?</p><div class="opciones"></div></div>
+      </div>
+
+      <div class="seccion">
+        <h2>Sección 2: Organización y tiempo</h2>
+        <p class="seccion-desc">Evalúa dificultades para administrar actividades y responsabilidades</p>
+        <div class="pregunta" id="q7"><p>7. Me cuesta organizar mi tiempo entre la escuela y mi vida personal</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q8"><p>8. Tengo dificultades para equilibrar estudio, familia y vida social</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q9"><p>9. ¿Con qué frecuencia sientes que tienes demasiadas responsabilidades al mismo tiempo?</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q10"><p>10. ¿Con qué frecuencia sientes ansiedad al pensar en tareas pendientes?</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q11"><p>11. ¿Qué tan seguido te cuesta concentrarte debido a preocupaciones o tensión emocional?</p><div class="opciones"></div></div>
+      </div>
+
+      <div class="seccion">
+        <h2>Sección 3: Salud física y mental</h2>
+        <p class="seccion-desc">Evalúa síntomas físicos y emocionales asociados al estrés</p>
+        <div class="pregunta" id="q12"><p>12. ¿Con qué frecuencia sientes cansancio mental durante el día?</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q13"><p>13. ¿Qué tan seguido tienes dolores de cabeza, tensión muscular o molestias físicas relacionadas con el estrés?</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q14"><p>14. ¿Qué tan seguido tienes dificultades para dormir por preocupaciones o pensamientos constantes?</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q15"><p>15. Duermo menos horas debido a actividades académicas</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q16"><p>16. Considero que la universidad o escuela afecta mis hábitos de alimentación o sueño</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q17"><p>17. Me siento agotado(a) física o mentalmente por la universidad o escuela</p><div class="opciones"></div></div>
+      </div>
+
+      <div class="seccion">
+        <h2>Sección 4: Ansiedad y emociones</h2>
+        <p class="seccion-desc">Evalúa el impacto emocional del estrés en los estudiantes</p>
+        <div class="pregunta" id="q18"><p>18. ¿Qué tan seguido te irritas o molestas fácilmente por situaciones pequeñas?</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q19"><p>19. ¿Con qué frecuencia sientes que no tienes control sobre las situaciones de tu vida diaria?</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q20"><p>20. ¿Qué tan seguido te cuesta relajarte incluso cuando tienes tiempo libre?</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q21"><p>21. Siento ansiedad antes de presentar exámenes</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q22"><p>22. He sentido que el estrés académico afecta mi bienestar emocional</p><div class="opciones"></div></div>
+      </div>
+
+      <div class="seccion">
+        <h2>Sección 5: Factores externos y sociales</h2>
+        <p class="seccion-desc">Evalúa factores familiares, económicos y sociales que influyen en el estrés</p>
+        <div class="pregunta" id="q23"><p>23. Siento presión por cumplir expectativas familiares o personales</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q24"><p>24. Los problemas económicos influyen en mi nivel de estrés académico</p><div class="opciones"></div></div>
+        <div class="pregunta" id="q25"><p>25. Considero que los horarios escolares afectan mi salud mental</p><div class="opciones"></div></div>
+      </div>
+
+      <p id="cuestionario-error" class="error"></p>
+      <button onclick="enviarCuestionario()">Ver mis resultados</button>
+    </div>
+  </div>
+
+  <!-- PANTALLA: Resultados -->
+  <div id="pantalla-resultados" class="pantalla">
+    <div class="card resultados-card">
+      <h1>Tus resultados</h1>
+      <div id="resultado-general"></div>
+      <div id="resultado-secciones"></div>
+      <div id="resultado-recomendaciones"></div>
+      <button onclick="mostrar('pantalla-cuestionario')">Volver a intentar</button>
+    </div>
+  </div>
+
   <script src="app.js"></script>
 </body>
 </html>
